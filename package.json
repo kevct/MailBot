@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.5.3"
+    "discord.js": "^12.5.3",
+    "shippo": "^1.6.0",
+    "sinon-as-promised": "^4.0.3"
   }
 }
