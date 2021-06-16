@@ -28,7 +28,7 @@ module.exports = {
                     .setTitle(`${carrier.toUpperCase()} ${trackingNum.toUpperCase()}`)
                     .addFields(
                         {name: `${result.tracking.origin_country_iso3} => ${result.tracking.destination_country_iso3}`, value: `${result.tracking.shipment_type}`},
-                        {name: `${result.tracking.subtag}`, value: `${result.tracking.subtag_message}`},
+                        {name: `${result.tracking.last_updated_at.split('T')[0]} ${result.tracking.last_updated_at.split('T')[1].split('+')[0]}`, value: `${result.tracking.subtag_message}`},
                         {name: `\u200B`, value: `[Tracking Link](${result.tracking.courier_tracking_link})`}
                     )
                 message.channel.send(discordEmbed);
