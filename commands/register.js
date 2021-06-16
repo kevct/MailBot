@@ -25,7 +25,16 @@ module.exports = {
         };
         aftership.tracking
             .createTracking(payload)
-            .then((result) => console.log(result))
+            .then((result) => {
+                const discordEmbed = new discord.MessageEmbed()
+                    .setColor("#1C6BCB")
+                    .setTitle(`${carrier.toUpperCase()} ${trackingNum.toUpperCase()}`)
+                    .addFields(
+                        {name: `Registered`, value: `Type \'&track ${carrier.toUpperCase()} ${trackingNum.toUpperCase()}\` to track the package`},
+                    )
+                message.channel.send(discordEmbed);
+                console.log(result);
+            })
             .catch((e) => {
                 const discordEmbed = new discord.MessageEmbed()
                     .setColor("#910000")

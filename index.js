@@ -2,7 +2,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const { token } = require('./config.json');
+const { discordKey } = require('./config.json');
 const { prefix }= require('./prefix.json');
 
 client.commands = new Discord.Collection();
@@ -34,5 +34,5 @@ client.on('message', message => {
 	}
 });
 
-client.login(token);
+client.login(discordKey);
 
