@@ -16,7 +16,7 @@ for (const file of commandFiles) {
 
 client.on('ready', () => {
     console.log('Ready!');
-	client.user.setActivity("Packages!", {
+	client.user.setActivity(`${prefix}help`, {
 		type: "WATCHING"
 	  });
 });
