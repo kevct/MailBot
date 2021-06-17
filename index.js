@@ -16,6 +16,9 @@ for (const file of commandFiles) {
 
 client.on('ready', () => {
     console.log('Ready!');
+	client.user.setActivity("Packages!", {
+		type: "WATCHING"
+	  });
 });
 
 client.on('message', message => {
