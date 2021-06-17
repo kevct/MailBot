@@ -11,6 +11,7 @@ module.exports = {
             .addFields(
                 {name: `${prefix}register [carrier] [tracking number]`, value: "Registers the tracking number to allow for tracking."},
                 {name: `${prefix}track [carrier] [tracking number]`, value: "Displays the status of the package."},
+                {name: `${prefix}delete [carrier] [tracking number]`, value: "Deletes the tracking number from the database."},
                 {name: `${prefix}help`, value: "Displays this message."}
             )
         message.channel.send(discordEmbed);
